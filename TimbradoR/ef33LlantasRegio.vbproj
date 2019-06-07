@@ -1,0 +1,964 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3089488C-C80C-4433-88A1-DAD201AA3D5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ef33LlantasRegio.My.MyApplication</StartupObject>
+    <RootNamespace>ef33LlantasRegio</RootNamespace>
+    <AssemblyName>ef33LlantasRegio</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://arasisco%40207.210.229.200/ef33.arasis.com.mx/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://ef33.arasis.com.mx/</InstallUrl>
+    <ProductName>eFactura33</ProductName>
+    <PublisherName>AraSis</PublisherName>
+    <SuiteName>Aplicaciones</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.html</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ef33LlantasRegio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ef33LlantasRegio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logoe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3DDF11EB944C21151F7F00DD28EB3878CBF0B24B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TimbradoR_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>dll\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>dll\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight">
+      <HintPath>dll\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases.vb" />
+    <Compile Include="conexion.vb" />
+    <Compile Include="CrearXML.vb" />
+    <Compile Include="DB.vb" />
+    <Compile Include="DocumentoPDF.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcercaDe.Designer.vb">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregaUsuarios.Designer.vb">
+      <DependentUpon>frmAgregaUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregaUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArchivos_efactura33.Designer.vb">
+      <DependentUpon>frmArchivos_efactura33.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmArchivos_efactura33.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComplementoVentaVehiculos.Designer.vb">
+      <DependentUpon>frmComplementoVentaVehiculos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmComplementoVentaVehiculos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaFacturas.Designer.vb">
+      <DependentUpon>frmConsultaFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContadorTimbres.Designer.vb">
+      <DependentUpon>frmContadorTimbres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmContadorTimbres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEsperaTimbrado.Designer.vb">
+      <DependentUpon>frmEsperaTimbrado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEsperaTimbrado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImpuestos.Designer.vb">
+      <DependentUpon>frmImpuestos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImpuestos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKardexXML.Designer.vb">
+      <DependentUpon>frmKardexXML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmKardexXML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilUsuario.Designer.vb">
+      <DependentUpon>frmPerfilUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerfilUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteXML.Designer.vb">
+      <DependentUpon>frmReporteXML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteXML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraslado.Designer.vb">
+      <DependentUpon>frmTraslado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTraslado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.vb">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVVInformacionAduanera.Designer.vb">
+      <DependentUpon>frmVVInformacionAduanera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVVInformacionAduanera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVVPartes.Designer.vb">
+      <DependentUpon>frmVVPartes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmVVPartes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmActividades.Designer.vb">
+      <DependentUpon>frmActividades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmActividades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmCentroCostos.Designer.vb">
+      <DependentUpon>frmCentroCostos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmCentroCostos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmDocumentoRelacionado.Designer.vb">
+      <DependentUpon>frmDocumentoRelacionado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmDocumentoRelacionado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmErogacion.Designer.vb">
+      <DependentUpon>frmErogacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmErogacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmGastosHidrocarburos.Designer.vb">
+      <DependentUpon>frmGastosHidrocarburos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmGastosHidrocarburos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmPozos.Designer.vb">
+      <DependentUpon>frmPozos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmPozos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmSubactividad.Designer.vb">
+      <DependentUpon>frmSubactividad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmSubactividad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmTareas.Designer.vb">
+      <DependentUpon>frmTareas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmTareas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmYacimientos.Designer.vb">
+      <DependentUpon>frmYacimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GastosHidrocarburos\frmYacimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimirKardex.vb" />
+    <Compile Include="ImprimirOrdenCompra.vb" />
+    <Compile Include="ImprimirReportes.vb" />
+    <Compile Include="MDIPrincipal.Designer.vb">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MySQL.vb" />
+    <Compile Include="NumAletras.vb" />
+    <Compile Include="Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service References\Banxico\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSCFD133PROD\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WSCFDI33\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLQ.vb" />
+    <Compile Include="Timbrar.vb" />
+    <Compile Include="TimbrarPrueba.vb" />
+    <Compile Include="Variables.vb" />
+    <Compile Include="wBuscar.Designer.vb">
+      <DependentUpon>wBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wCliente.Designer.vb">
+      <DependentUpon>wCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wClientes.Designer.vb">
+      <DependentUpon>wClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wConfiguracion.Designer.vb">
+      <DependentUpon>wConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wDoctosRelacionados.Designer.vb">
+      <DependentUpon>wDoctosRelacionados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wDoctosRelacionados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wGeneraPDF.Designer.vb">
+      <DependentUpon>wGeneraPDF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wGeneraPDF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wMenu.Designer.vb">
+      <DependentUpon>wMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wPagos.Designer.vb">
+      <DependentUpon>wPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wPagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wProducto.Designer.vb">
+      <DependentUpon>wProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wProductos.Designer.vb">
+      <DependentUpon>wProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregaUsuarios.resx">
+      <DependentUpon>frmAgregaUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArchivos_efactura33.resx">
+      <DependentUpon>frmArchivos_efactura33.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComplementoVentaVehiculos.resx">
+      <DependentUpon>frmComplementoVentaVehiculos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaFacturas.resx">
+      <DependentUpon>frmConsultaFacturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmContadorTimbres.resx">
+      <DependentUpon>frmContadorTimbres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEsperaTimbrado.resx">
+      <DependentUpon>frmEsperaTimbrado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImpuestos.resx">
+      <DependentUpon>frmImpuestos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKardexXML.resx">
+      <DependentUpon>frmKardexXML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilUsuario.resx">
+      <DependentUpon>frmPerfilUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteXML.resx">
+      <DependentUpon>frmReporteXML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraslado.resx">
+      <DependentUpon>frmTraslado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVVInformacionAduanera.resx">
+      <DependentUpon>frmVVInformacionAduanera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVVPartes.resx">
+      <DependentUpon>frmVVPartes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmActividades.resx">
+      <DependentUpon>frmActividades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmCentroCostos.resx">
+      <DependentUpon>frmCentroCostos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmDocumentoRelacionado.resx">
+      <DependentUpon>frmDocumentoRelacionado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmErogacion.resx">
+      <DependentUpon>frmErogacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmGastosHidrocarburos.resx">
+      <DependentUpon>frmGastosHidrocarburos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmPozos.resx">
+      <DependentUpon>frmPozos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmSubactividad.resx">
+      <DependentUpon>frmSubactividad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmTareas.resx">
+      <DependentUpon>frmTareas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosHidrocarburos\frmYacimientos.resx">
+      <DependentUpon>frmYacimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wBuscar.resx">
+      <DependentUpon>wBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wCliente.resx">
+      <DependentUpon>wCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wClientes.resx">
+      <DependentUpon>wClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wConfiguracion.resx">
+      <DependentUpon>wConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wDoctosRelacionados.resx">
+      <DependentUpon>wDoctosRelacionados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wGeneraPDF.resx">
+      <DependentUpon>wGeneraPDF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wMenu.resx">
+      <DependentUpon>wMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wPagos.resx">
+      <DependentUpon>wPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wProducto.resx">
+      <DependentUpon>wProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wProductos.resx">
+      <DependentUpon>wProductos.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="00001000000405530438.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSD_Ciudad_de_Mexico_DSP061215SL4_20170317_124830.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CertificadoFirmadoPF.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CertificadoFirmadoPF.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="00001000000412041724.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSD_DWF_OCD120403JU9_20180906_162019.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSD_Ciudad_de_Mexico_DSP061215SL4_20170317_124830.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Claveprivada_FIEL_FEHJ730109BC9_20161205_111650.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Claveprivada_FIEL_FEHJ730109BC9_20161205_111650.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fehj730109bc9.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\LogoJPEG300dpi.jpg" />
+    <None Include="Resources\LogosinSloganJPEG300dpi.jpg" />
+    <None Include="Resources\LogosinSloganPNG300dpi.png" />
+    <None Include="Resources\L1.png" />
+    <None Include="Resources\L2.png" />
+    <None Include="Service References\Banxico\configuration91.svcinfo" />
+    <None Include="Service References\Banxico\configuration.svcinfo" />
+    <None Include="Service References\Banxico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\icons8-delete-document-filled-50.png" />
+    <None Include="Resources\efac33Hidrocarburos1.png" />
+    <None Include="Service References\WSCFD133PROD\configuration91.svcinfo" />
+    <None Include="Service References\WSCFD133PROD\configuration.svcinfo" />
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaAceptacionRechazo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaCancelacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaCancelacionAsincrona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaCreditos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaEstatusCancelacionAsincrona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaPeticionesPendientes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaRelacionados.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaReporte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaTFD33.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\ef33LlantasRegio.WSCFD133PROD.RespuestaValidacionRFC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFD133PROD\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\icons8-customer-48.png" />
+    <None Include="Resources\icons8-secure-48.png" />
+    <None Include="Resources\Checked-48.png" />
+    <None Include="Resources\Cancel-48.png" />
+    <Content Include="XSLT\aerolineas.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\cadenaoriginal_3_3.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\certificadodedestruccion.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\cfdiregistrofiscal.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\ComercioExterior11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\consumodecombustibles.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\consumodeCombustibles11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\detallista.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\divisas.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\donat11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\ecc11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\ecc12.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\GastosHidrocarburos10.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\iedu.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\implocal.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\ine11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\IngresosHidrocarburos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\leyendasFisc.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\nomina12.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\notariospublicos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\obrasarteantiguedades.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\pagoenespecie.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\Pagos10.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\pfic.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\renovacionysustitucionvehiculos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\servicioparcialconstruccion.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\terceros11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\TuristaPasajeroExtranjero.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\utilerias.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\valesdedespensa.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\vehiculousado.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XSLT\ventavehiculos11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\icons8-xml-40.png" />
+    <None Include="Resources\icons8-pdf-48.png" />
+    <None Include="Resources\icons8-close-window-48 %281%29.png" />
+    <None Include="Resources\icons8-Search-481.png" />
+    <None Include="Resources\icons8-Print-48.png" />
+    <None Include="Resources\icons8-microsoft-excel-48.png" />
+    <None Include="Service References\Banxico\DgieWS.wsdl" />
+    <None Include="Service References\WSCFD133PROD\WSCFDI33.wsdl" />
+    <None Include="Service References\WSCFD133PROD\WSCFDI33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSCFD133PROD\WSCFDI331.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSCFD133PROD\WSCFDI332.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSCFD133PROD\WSCFDI333.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaAceptacionRechazo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaCancelacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaCancelacionAsincrona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaCreditos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaEstatusCancelacionAsincrona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaPeticionesPendientes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaRelacionados.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaReporte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaTFD33.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\ef33LlantasRegio.WSCFDI33.RespuestaValidacionRFC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WSCFDI33\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\WSCFDI33\configuration.svcinfo" />
+    <None Include="Service References\WSCFDI33\configuration91.svcinfo" />
+    <None Include="bin\Release\SAT\cfdv33.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Release\SAT\GastosHidrocarburos10.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSCFDI33\WSCFDI33.wsdl" />
+    <None Include="Service References\WSCFDI33\WSCFDI33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSCFDI33\WSCFDI331.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSCFDI33\WSCFDI332.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSCFDI33\WSCFDI333.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimbradoR_TemporaryKey.pfx" />
+    <None Include="XSLT\cfdv33.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Atras1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-card-payment-50%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-card-payment-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-config-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-100%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-document-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pdf-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-24%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sindatabase-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-support-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-support-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\índice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cfdi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Release\SAT\cadenaoriginal_3_3.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons8-invoice-48.ico" />
+    <Content Include="Logoe.ico" />
+    <None Include="Resources\Logoe.png" />
+    <None Include="Resources\LogoFacrura33.png" />
+    <None Include="Resources\icons8-Lock-48.png" />
+    <None Include="Resources\icons8-User-48.png" />
+    <None Include="Resources\LogoArasisPNG300dpi.png" />
+    <None Include="Resources\icons8-invoice-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="bin\Release\SAT\cadenaoriginal_3_3.xslt">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Banxico\" />
+    <WCFMetadataStorage Include="Service References\WSCFD133PROD\" />
+    <WCFMetadataStorage Include="Service References\WSCFDI33\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
