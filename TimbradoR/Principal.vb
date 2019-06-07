@@ -4745,19 +4745,5 @@ Public Class Principal
             Exit Sub
         End Try
     End Sub
-    Private Sub BtnGenerarXML_Click_1(sender As Object, e As EventArgs) Handles btnGenerarXML.Click
 
-    End Sub
-
-    Private Sub CmbConcepto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbConcepto.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub CmbAlmacenIntelisis_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbAlmacenIntelisis.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub CmbSucursalIntelisis_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSucursalIntelisis.SelectedIndexChanged
-
-    End Sub
 End Class
